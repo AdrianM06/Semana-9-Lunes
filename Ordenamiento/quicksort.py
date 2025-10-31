@@ -7,16 +7,13 @@ def partition(lista):
             menor.append(lista[i])
         elif lista[i] > pivote:
             mayor.append(lista[i])
-    
     return menor, pivote, mayor
 
 
 def quicksort(lista):
     if len(lista) < 2:
         return lista
-    
     menores, pivote, mayores = partition(lista)
-
     return quicksort(menores) + [pivote] + quicksort(mayores)
 
 
